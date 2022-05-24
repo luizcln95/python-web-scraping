@@ -14,7 +14,7 @@ for i in range(1980, 2022):  # access information for each season
     header = table.find('thead')
     body = table.find('tbody')
     players = body.find_all('tr', attrs={'class': 'full_table'})
-    for j in players: # get stats for each player in the season
+    for j in players:  # get stats for each player in the season
         player_stats = [x.text for x in j.find_all('td')]
         player_stats.append(i)
         data.append(player_stats)
